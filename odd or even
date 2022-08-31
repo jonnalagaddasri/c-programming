@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+int ans =1;
+printf("CHOICES\n1. Numbers\n2. Strings\n");
+while(ans == 1){
+int choice;
+printf("Enter your Choice : ");
+scanf("%d",&choice);
+if(choice == 1){
+float n;
+int i;
+printf("Enter the Number : ");
+scanf("%f",&n);
+if(n < 0 || n-(int)n!= 0){
+printf("Invalid Number!!!!\n");
+}
+else{
+int num = ceil(n);
+if(num%2 == 0){
+printf("%d is an EVEN
+number!!!\n",num);
+}
+else{
+printf("%d is an ODD
+number!!!\n",num);
+}
+}
+}
+else if(choice == 2){
+char n[10];
+printf("Enter the Number : ");
+scanf("%s",n);
+printf("INVALID INPUT!!!\n");
+}
+printf("\nDo you want to Continue ? ");
+scanf("%d",&ans);
+printf("\n");
+}
+return 0;
+}
