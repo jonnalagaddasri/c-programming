@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[1000];
+	scanf("%s",a);
+	int i,Ccount=0,Scount=0,Ncount=0;
+	int l;
+	l=strlen(a);
+	for(i=0;(i<1000)&&i<l;i++){
+		if(a[i]!='*'){
+		
+		if(int(a[i])>96 && int(a[i])<123){
+			Scount++;
+		}
+		if(int(a[i])>64 && int(a[i])<91){
+			Ccount++;
+		}
+		if(int(a[i])>47 && int(a[i])<58){
+			Ncount++;
+		}
+	}
+	else{
+		break;
+	}	
+	}
+	printf("Ccount:%d\nScount=%d\nNcount=%d",Ccount,Scount,Ncount);
+}
